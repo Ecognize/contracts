@@ -1,0 +1,69 @@
+%
+% Copyright 2016 Erint Labs OÜ
+%
+% Licensed under the EUPL, Version 1.1 or – as soon they
+% will be approved by the European Commission - subsequent
+% versions of the EUPL (the "Licence");
+% You may not use this work except in compliance with the
+% Licence.
+% You may obtain a copy of the Licence at:
+%
+% https://joinup.ec.europa.eu/software/page/eupl
+%
+% Unless required by applicable law or agreed to in
+% writing, software distributed under the Licence is
+% distributed on an "AS IS" basis,
+% WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+% express or implied.
+% See the Licence for the specific language governing
+%permissions and limitations under the Licence.
+%
+\documentclass[a4paper]{article}
+\usepackage[landscape]{geometry}
+\usepackage{fullpage}
+% TODO: non XeLaTeX compliation support
+\usepackage[colorlinks]{hyperref}
+\usepackage{paracol}
+\usepackage{fancyref}
+\usepackage{fontspec}
+\usepackage{xltxtra}
+\usepackage{xunicode}
+\XeTeXinputencoding utf8
+\usepackage{polyglossia}
+\setdefaultlanguage{ukrainian}
+\setotherlanguages{english,estonian}
+\setromanfont[Mapping=tex-text]{Linux Libertine}
+
+% TODO: form vertical alignment to match with text
+% TODO: remove color borders maybe?
+% TODO: better document class?
+% TODO: make hyperref only use English names for TOC entries
+% WARNING: current Estonian version is Google translate. DO NOT use it right now
+
+% Three column text in UK, EN, and ET
+\newcommand\freetext[3]{\begin{ukrainian}#1\end{ukrainian}\switchcolumn\begin{english}#2\end{english}\switchcolumn\begin{estonian}#3\end{estonian}\switchcolumn}
+% Same with section header
+\newcommand\clause[6]{\freetext{\section{#1}#4}{\section{#2}#5}{\section{#3}#6}}
+% Cute symbols
+\renewcommand\thesection{§\arabic{section}.}
+\newcommand\smartref[2]{\hyperref[#1]{#2 \ref{#1}}}
+
+\begin{document}
+  \begin{Form}
+    \title{Договір про надання послуг / Service provision agreement / Töövõtuleping \TextField[name=contractno]{}}
+    \date{\today / \textenglish{\today} / \textestonian{\today}}
+    \maketitle
+
+    \begin{paracol}{3}
+      \clause
+        {Мова та терміни договору}
+        {Agreement language and terms}
+        {Lepingu keelt ja termineid määratlus}
+        {Цей договір укладено у трьох версіях: українською, англійською та естонською мовами. Офіційні назви сторін договору наведені у версії, що відповідає державній мові країни, в якій відповідна сторона є резидентом, а також неофційно адаптовані у інших версіях. У разі сумнівів щодо відповідності версій, англійська вважатиметься оригіналом, окрім офіційних назв сторін договору. Виключно з метою перекладу відповідність ор\-га\-ні\-за\-цій\-но-правових форм господарювання між мовами договору наведено у \smartref{app:correspondence}{додатку}.}
+        {This agreement is concluded in three langauge versions, namely: Ukrainian, English and Estonoan. The official agreement party names are provided as they are in the version corresponding to the state language of the country where the respective party is resident in and are unofficially adapted in other translations. In case of doubts concerning the conformity between the versions, the English one shall be considered as the original, except for the official agreement party names. For the purpose of translation only the correspondence between the types of business entities in agreement's languages is provided in \smartref{app:correspondence}{appendix}.}
+        {See kokkulepe on sõlmitud kolmes langauge versioone, nimelt: Ukraina, inglise ja Estonoan. Ametliku kokkuleppe osapoole nimed on ette nagu nad on versioon, mis vastab riigi maa keelt, kus vastav osapool elab ja on mitteametlikult kohandada teiste tõlkeid. Kui kahtlused vastavust erinevate versioonide vahel, ingliskeelne loetakse originaal, välja arvatud ametliku lepingu osapool nimed. Selleks, et tõlke ainult järgmine tabel näitab kirjavahetust tüüpi majandusüksuste kokkuleppel keeled.}
+    \end{paracol}
+  \end{Form}
+  \appendix
+  \input{appendix_correspondence}
+\end{document}
