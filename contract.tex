@@ -42,7 +42,9 @@
 % WARNING: current Estonian version is Google translate. DO NOT use it right now
 
 % Three column text in UK, EN, and ET
-\newcommand\freetext[3]{\begin{ukrainian}#1\end{ukrainian}\switchcolumn\begin{english}#2\end{english}\switchcolumn\begin{estonian}#3\end{estonian}\switchcolumn}
+\newcommand\freetextcommon[3]{\begin{ukrainian}#1\end{ukrainian}\switchcolumn\begin{english}#2\end{english}\switchcolumn\begin{estonian}#3\end{estonian}}
+\newcommand\freetextnoalign[3]{\freetextcommon{#1}{#2}{#3}\swtichcolumn}
+\newcommand\freetext[3]{\freetextcommon{#1}{#2}{#3}\switchcolumn*}
 % Same with section header
 \newcommand\clause[6]{\freetext{\section{#1}#4}{\section{#2}#5}{\section{#3}#6}}
 % Cute symbols
