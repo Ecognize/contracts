@@ -48,7 +48,7 @@
 % Same with section header
 \newcommand\clause[6]{\freetext{\section{#1}#4}{\section{#2}#5}{\section{#3}#6}}
 % Cute symbols
-\renewcommand\thesection{§\arabic{section}.}
+\renewcommand\thesection{§\arabic{section}}
 % Hyperlinks to Appendixes and sections
 \newcommand\smartref[2]{\hyperref[#1]{#2\ref{#1}}}
 
@@ -69,11 +69,18 @@
         {This agreement is concluded in three langauge versions, namely: Ukrainian, English and Estonian. The official agreement party names are provided as they are in the version corresponding to the state language of the country where the respective party is resident in and are unofficially adapted in other translations. In case of doubts concerning the conformity between the versions, the Ukrainian one shall be considered as the original, except for the official agreement party names. For the purpose of translation only the correspondence between the types of business entities in agreement's languages is provided in \smartref{app:correspondence}{appendix }.}
         {}
       \clause
+        {Нерозголошення}
+        {Non-disclosure}
+        {}
+        {\label{sec:nda}}
+        {}
+        {}
+      \clause
         {Авторські права}
         {Copyright}
         {}
-        {ПІДРЯДНИК передаватиме ЗАМОВНИКУ майнові авторські права на результати виконання послуг згідно до цієї угоди, такі як програмний код, креслення, звіти, моделі, графічні матеріали, дані досліджень, документація тощо, але не обмежуючись цим переліком. ПІДРЯДНИК втім матиме право вважатись автором цього матеріалу та використовувати його в цілях портфоліо, якщо це не суперечить \smartref{sec:nda}{§}. У випадку, якщо ПІДРЯДНИК виконує послуги на користь ТРЕТЬОЇ ОСОБИ від імені ЗАМОВНИКА, домовленість ЗАМОВНИКА та ТРЕТЬОЇ ОСОБИ щодо порядку передачі авторських прав матиме приорітет над положеннями цієї угоди.}
-        {The CONTRACTOR shall transfer the copyright over the results of the services provided including, but not limited to software source code, schematics, reports, models, graphical material, research data, documentation \emph{et cetera} to the CLIENT. The CONTRACTOR however shall be considered the author of the respective material and allowed to use it in the purposes of porfolio such act would contradcit \smartref{sec:nda}{§}. In cases when the CONTRACTOR provides the services to the THIRD PARTY on the CLIENT's behalf, the agreement on copyright transfer between the THIRD PARTY and the CLIENT would take priority over the provisions of this agreement.}
+        {ПІДРЯДНИК передаватиме ЗАМОВНИКУ майнові авторські права на результати виконання послуг згідно до цієї угоди, такі як програмний код, креслення, звіти, моделі, графічні матеріали, дані досліджень, документація тощо, але не обмежуючись цим переліком. ПІДРЯДНИК втім матиме право вважатись автором цього матеріалу та використовувати його в цілях портфоліо, якщо це не суперечить \smartref{sec:nda}{}. У випадку, якщо ПІДРЯДНИК виконує послуги на користь ТРЕТЬОЇ ОСОБИ від імені ЗАМОВНИКА, домовленість ЗАМОВНИКА та ТРЕТЬОЇ ОСОБИ щодо порядку передачі авторських прав матиме приорітет над положеннями цієї угоди.}
+        {The CONTRACTOR shall transfer the copyright over the results of the services provided including, but not limited to software source code, schematics, reports, models, graphical material, research data, documentation \emph{et cetera} to the CLIENT. The CONTRACTOR however shall be considered the author of the respective material and allowed to use it in the purposes of porfolio unless such act would contradcit \smartref{sec:nda}{}. In cases when the CONTRACTOR provides the services to the THIRD PARTY on the CLIENT's behalf, the agreement on copyright transfer between the THIRD PARTY and the CLIENT would take priority over the provisions of this agreement.}
         {}
     \end{paracol}
   \appendix
