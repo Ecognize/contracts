@@ -27,6 +27,7 @@
 \usepackage{fancyref}
 \usepackage{fontspec}
 \usepackage{xltxtra}
+\usepackage{ifthen}
 \usepackage{xunicode}
 \XeTeXinputencoding utf8
 \usepackage{polyglossia}
@@ -38,6 +39,7 @@
 % TODO: remove color borders maybe?
 % TODO: better document class?
 % TODO: make hyperref only use English names for TOC entries
+% TODO: prevent letters in numeric fields
 % WARNING: current Estonian version is Google translate. DO NOT use it right now
 
 % Three column text in UK, EN, and ET
@@ -63,7 +65,8 @@
         {This agreement is concluded in three langauge versions, namely: Ukrainian, English and Estonian. The official agreement party names are provided as they are in the version corresponding to the state language of the country where the respective party is resident in and are unofficially adapted in other translations. In case of doubts concerning the conformity between the versions, the English one shall be considered as the original, except for the official agreement party names. For the purpose of translation only the correspondence between the types of business entities in agreement's languages is provided in \smartref{app:correspondence}{appendix}.}
         {}
     \end{paracol}
-  \end{Form}
   \appendix
   \input{appendix_correspondence}
+  \input{appendix_services}
+  \end{Form}
 \end{document}

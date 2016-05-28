@@ -14,3 +14,4 @@ Company-Contractor agreement templates
 - `hyperref`
 - `fontspec`
 - `fancyref`
+- `ifthen`
