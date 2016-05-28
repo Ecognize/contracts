@@ -35,7 +35,6 @@
 \setotherlanguages{english,estonian}
 \setromanfont[Mapping=tex-text]{Linux Libertine}
 
-% TODO: form vertical alignment to match with text
 % TODO: remove color borders maybe?
 % TODO: better document class?
 % TODO: make hyperref only use English names for TOC entries
@@ -48,11 +47,12 @@
 \newcommand\clause[6]{\freetext{\section{#1}#4}{\section{#2}#5}{\section{#3}#6}}
 % Cute symbols
 \renewcommand\thesection{§\arabic{section}.}
+% Hyperlinks to Appendixes and sections
 \newcommand\smartref[2]{\hyperref[#1]{#2 \ref{#1}}}
 
 \begin{document}
   \begin{Form}
-    \title{Договір про надання послуг / Service provision agreement / Töövõtuleping \TextField[name=contractno]{}}
+    \title{Договір про надання послуг / Service provision agreement / Töövõtuleping \raisebox{-6pt}{\TextField[borderwidth=0,charsize=14pt,name=contractno]{}}}
     \date{\today / \textenglish{\today} / \textestonian{\today}}
     \maketitle
 

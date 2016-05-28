@@ -18,7 +18,6 @@
 % See the Licence for the specific language governing
 % permissions and limitations under the Licence.
 %
-% TODO: width adjustments
 \pagebreak
 % This is lame, but I have no will to make it better
 \newcommand{\myloop}[3]{\stepcounter{#1}#3\ifthenelse{\value{#1} < \value{#2}}{\\\myloop{#1}{#2}{#3}}{\\}}
@@ -35,9 +34,9 @@
   \hline
     \setcounter{i}{0}
     \myloop{i}{n}{\arabic{i} &
-      \TextField[width=40pt,height=12pt,charsize=8pt,name=kved\arabic{i}]{} &
-      \TextField[width=40pt,height=12pt,charsize=8pt,name=emtak\arabic{i}]{} &
-      \TextField[width=500pt,height=12pt,charsize=8pt,name=desc\arabic{i}]{} &
-      \TextField[width=40pt,height=12pt,charsize=8pt,name=rate\arabic{i}]{}}
+      \raisebox{-2.2pt}{\TextField[borderwidth=0,width=40pt,height=10pt,charsize=8pt,name=kved\arabic{i}]{}} &
+      \raisebox{-2.2pt}{\TextField[borderwidth=0,width=40pt,height=10pt,charsize=8pt,name=emtak\arabic{i}]{}} &
+      \raisebox{-2.2pt}{\TextField[borderwidth=0,width=500pt,height=10pt,charsize=8pt,name=desc\arabic{i}]{}} &
+      \raisebox{-2.2pt}{\TextField[borderwidth=0,width=40pt,height=10pt,charsize=8pt,name=rate\arabic{i}]{}}}
     \hline
 \end{tabular}
