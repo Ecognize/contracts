@@ -7,7 +7,6 @@ Company-Contractor agreement templates
 # Package requirements
 - `paracol`
 - `geometry`
-- `fullage`
 - `xunicode`
 - `polyglossia`
 - `xltxtra`
@@ -15,3 +14,4 @@ Company-Contractor agreement templates
 - `fontspec`
 - `fancyref`
 - `ifthen`
+- `multirow`

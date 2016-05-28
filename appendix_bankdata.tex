@@ -1,0 +1,73 @@
+%
+% Copyright 2016 Erint Labs OÜ
+%
+% Licensed under the EUPL, Version 1.1 or – as soon they
+% will be approved by the European Commission - subsequent
+% versions of the EUPL (the "Licence");
+% You may not use this work except in compliance with the
+% Licence.
+% You may obtain a copy of the Licence at:
+%
+% https://joinup.ec.europa.eu/software/page/eupl
+%
+% Unless required by applicable law or agreed to in
+% writing, software distributed under the Licence is
+% distributed on an "AS IS" basis,
+% WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+% express or implied.
+% See the Licence for the specific language governing
+% permissions and limitations under the Licence.
+%
+\pagebreak
+\section{Банківські реквизити сторін\\Bank details of the parties\\Pangaandmed poolte}
+\label{app:bank}
+\newcommand\banktable[1]{
+\begin{tabular}{ | r | l | }
+  \hline
+  Отримувач & \multirow{3}{*}{\raisebox{-2pt}{\TextField[name=benef#1,width=150pt,height=16pt,charsize=12pt,borderwidth=0]{}}} \\
+  Beneficiary & \\
+  Kasusaaja & \\
+  \hline
+  Банк отримувача & \multirow{3}{*}{\raisebox{-2pt}{\TextField[name=bank#1,width=150pt,height=16pt,charsize=12pt,borderwidth=0]{}}} \\
+  Beneficiary bank & \\
+  Saaja pank & \\
+  \hline
+  Відділення банку отримувача & \multirow{3}{*}{\raisebox{-2pt}{\TextField[name=branch#1,width=150pt,height=16pt,charsize=12pt,borderwidth=0]{}}} \\
+  Beneficiary bank branch & \\
+  Saaja panga filiaal & \\
+  \hline
+  IBAN & \multirow{4}{*}{\raisebox{-2pt}{\TextField[name=iban#1,width=150pt,height=12pt,charsize=8pt,borderwidth=0]{}}} \\
+  Номе рахунку отримувача & \\
+  Beneficiary account \# & \\
+  Saaja konto \# & \\
+  \hline
+  BIC/SWIFT банку отримувача & \multirow{3}{*}{\raisebox{-2pt}{\TextField[name=swift#1,width=150pt,height=16pt,charsize=12pt,borderwidth=0]{}}} \\
+  Beneficiary bank BIC/SWIFT & \\
+  Saaja panga BIC/SWIFT & \\
+  \hline
+  Банк-кореспонтент & \multirow{3}{*}{\raisebox{-2pt}{\TextField[name=corrbank#1,width=150pt,height=16pt,charsize=12pt,borderwidth=0]{}}} \\
+  Correspondent bank & \\
+  Korrespondentpank & \\
+  \hline
+  Номер кореспондентського рахунку & \multirow{3}{*}{\raisebox{-2pt}{\TextField[name=corriban#1,width=150pt,height=12pt,charsize=8pt,borderwidth=0]{}}} \\
+  Correspondent account \# & \\
+  Korrespondentkonto \# & \\
+  \hline
+  BIC/SWIFT банку-кореспонденту & \multirow{3}{*}{\raisebox{-2pt}{\TextField[name=corrswift#1,width=150pt,height=16pt,charsize=12pt,borderwidth=0]{}}} \\
+  Correspondent bank BIC/SWIFT & \\
+  Korrespondentpangale BIC/SWIFT & \\
+  \hline
+  Розташування банку-кореспонденту & \multirow{3}{*}{\raisebox{-2pt}{\TextField[name=corr#1,width=150pt,height=16pt,charsize=12pt,borderwidth=0]{}}} \\
+  Correspondent bank location & \\
+  Korrespondentpanga asukohta & \\
+  \hline
+\end{tabular}
+}
+\begin{paracol}{2}
+  \section*{ЗАМОВНИК / CLIENT / KLIENT}
+  \banktable{client}
+  \switchcolumn
+  \section*{ПІДРЯДНИК / CONTRACTOR / TÖÖVÕTJA}
+  % TODO: why they are not on the same vertical position?
+  \banktable{contractor}
+\end{paracol}
