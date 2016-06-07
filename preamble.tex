@@ -29,6 +29,7 @@
 \usepackage{ifthen}
 \usepackage{multirow}
 \usepackage{xunicode}
+\usepackage{fancyhdr}
 \XeTeXinputencoding utf8
 \usepackage{polyglossia}
 \setdefaultlanguage{ukrainian}
@@ -41,6 +42,15 @@
 % TODO: prevent letters in numeric fields
 % TODO: stylish small capitals
 % WARNING: current Estonian version is Google translate. DO NOT use it right now
+
+% Footer to contain the template
+\pagestyle{fancy}
+\fancyhead{}
+\renewcommand{\headrulewidth}{0pt}
+\lfoot{\large\thepage}
+\cfoot{}
+\newcommand\docurl{https://github.com/ErintLabs/contracts/blob/master/\jobname.tex}
+\rfoot{\scriptsize Шаблон доступний за адресою / Template available at / Šabloon on kättesaadav aadressil : \href{\docurl}{\docurl} }
 
 % Entry boxes with \raisebox
 \newcommand\field[3]{\raisebox{-#2pt}{\TextField[borderwidth=0,#3,name=#1]{}}}
