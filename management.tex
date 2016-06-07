@@ -21,7 +21,7 @@
 \input{preamble}
 
 % Neat box for votings
-\newcommand\voteline[2]{#1:&\fieldwhs{#2}{30}{10}{8}\\}
+\newcommand\voteline[2]{#1:&\fieldwhs{#2}{30}{10}{8} \%\\}
 \newcommand\votebox[4]{\begin{tabular}{r l}\voteline{#2}{#1yes}\voteline{#3}{#1no}\voteline{#4}{#1abs}\end{tabular}}
 \newcommand\voteUK[1]{\votebox{#1UK}{За}{Проти}{Утрималось}}
 \newcommand\voteEN[1]{\votebox{#1EN}{For}{Against}{Abstained}}
@@ -105,7 +105,7 @@
           датованому(-ій):\\
           \fieldline{previousdateUK}
           \subsection{Призначення нового складу правління}
-          Призначити членами правління осіб, визначених у \smartref{app:management}{додатку } безстроково з наступного календарного дня після дня проведення цього Зібрання.
+          Призначити членами правління осіб, визначених у \smartref{app:management}{додатку }, безстроково з наступного календарного дня після дня проведення цього Зібрання.
         }
         { \subsection{Suspension of the management board}
           Suspend the current management board elected by:\\
