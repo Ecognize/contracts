@@ -42,6 +42,21 @@
 % TODO: stylish small capitals
 % WARNING: current Estonian version is Google translate. DO NOT use it right now
 
+% Entry boxes with \raisebox
+\newcommand\field[3]{\raisebox{-#2pt}{\TextField[borderwidth=0,#3,name=#1]{}}}
+\newcommand\fieldrws[4]{\field{#1}{#2}{width=#3pt,charsize=#4pt}}
+\newcommand\fieldhs[3]{\field{#1}{2}{height=#2pt,charsize=#3pt}}
+\newcommand\fieldwhs[4]{\field{#1}{2}{width=#2pt,height=#3pt,charsize=#4pt}}
+\newcommand\fieldw[2]{\field{#1}{2}{width=#2pt}}
+\newcommand\fieldtw[2]{\field{#1}{2.2}{height=10pt,charsize=8pt,width=#2pt}}
+
+% Most typical variations
+\newcommand\fieldline[1]{\fieldw{#1}{250}}
+\newcommand\fieldterm[1]{\fieldhs{#1}{12}{10}}
+\newcommand\fieldt[1]{\fieldtw{#1}{40}}
+\newcommand\fieldb[1]{\fieldwhs{#1}{150}{14}{10}}
+\newcommand\fieldbs[1]{\fieldwhs{#1}{150}{12}{8}}
+
 % Three column text in UK, EN, and ET
 \newcommand\freetextcommon[3]{\begin{ukrainian}#1\end{ukrainian}\switchcolumn\begin{english}#2\end{english}\switchcolumn\begin{estonian}#3\end{estonian}}
 \newcommand\freetextnoalign[3]{\freetextcommon{#1}{#2}{#3}\swtichcolumn}
@@ -52,3 +67,5 @@
 \renewcommand\thesection{§\arabic{section}}
 % Hyperlinks to Appendixes and sections
 \newcommand\smartref[2]{\hyperref[#1]{#2\ref{#1}}}
+% This is lame, but I have no will to make it better
+\newcommand{\myloop}[3]{\stepcounter{#1}#3\ifthenelse{\value{#1} < \value{#2}}{\\\myloop{#1}{#2}{#3}}{\\}}

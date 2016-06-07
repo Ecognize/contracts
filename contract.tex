@@ -22,9 +22,9 @@
 
 \begin{document}
   \begin{Form}
-    \title{Угода про надання послуг / Service provision agreement / Töövõtuleping\\№ \raisebox{-6pt}{\TextField[borderwidth=0,width=250pt,charsize=14pt,name=contractno]{}}}
+    \title{Угода про надання послуг / Service provision agreement / Töövõtuleping\\№ \fieldrws{contractno}{6}{250}{14}}
     % TODO: using author field for place is ugly, let's use another docuement class in future
-    \author{\raisebox{-2pt}{\TextField[borderwidth=0,charsize=10pt,height=12pt,name=placeUK]{}} / \raisebox{-2pt}{\TextField[borderwidth=0,charsize=10pt,height=12pt,name=placeEN]{}} / \raisebox{-2pt}{\TextField[borderwidth=0,charsize=10pt,height=12pt,name=placeET]{}}}
+    \author{\fieldterm{placeUK} / \fieldterm{placeEN} / \fieldterm{placeET}}
     \date{\today / \textenglish{\today} / \textestonian{\today}}
     \maketitle
 
@@ -33,8 +33,87 @@
         {Преамбула} % TODO eliminate hanging line
         {Preamble} % TODO change wording to introduce AGREEMENT
         {}
-        {\textbf{СТОРОНИ}, що уклали цю \textbf{УГОДУ} є з одного боку \\\raisebox{-2pt}{\TextField[name=customernameUK,borderwidth=0,width=250pt]{}},\\зареєстроване(-ий,-а) в\\\raisebox{-2pt}{\TextField[name=customercountryUK,borderwidth=0,width=250pt]{}}\\із кодом (податковим номером)\\\raisebox{-2pt}{\TextField[name=customercodeUK,borderwidth=0,width=250pt]{}}\\під адресою\\\raisebox{-2pt}{\TextField[name=customeraddr1UK,borderwidth=0,width=250pt]{}}\\\raisebox{-2pt}{\TextField[name=customeraddr2UK,borderwidth=0,width=250pt]{}}\\в особі\\\raisebox{-2pt}{\TextField[name=customerpersonUK,borderwidth=0,width=250pt]{}},\\народженого(-ої)\\\raisebox{-2pt}{\TextField[name=customerdobUK,borderwidth=0,width=250pt]{}},\\що має індивідуальний номер\\\raisebox{-2pt}{\TextField[name=customeridUK,borderwidth=0,width=250pt]{}}\\ в \\\raisebox{-2pt}{\TextField[name=customerperscountryUK,borderwidth=0,width=250pt]{}}\\та діє на підставі\\\raisebox{-2pt}{\TextField[name=customerrightUK,borderwidth=0,width=250pt]{}}\\далі позначений як \textbf{ЗАМОВНИК} та з іншого боку\\\raisebox{-2pt}{\TextField[name=providernameUK,borderwidth=0,width=250pt]{}},\\зареєстроване(-ий,-а) в\\\raisebox{-2pt}{\TextField[name=providercountryUK,borderwidth=0,width=250pt]{}}\\із кодом (податковим номером)\\\raisebox{-2pt}{\TextField[name=providercodeUK,borderwidth=0,width=250pt]{}}\\під адресою\\\raisebox{-2pt}{\TextField[name=provideraddr1UK,borderwidth=0,width=250pt]{}}\\\raisebox{-2pt}{\TextField[name=provideraddr2UK,borderwidth=0,width=250pt]{}}\\в особі\\\raisebox{-2pt}{\TextField[name=providerpersonUK,borderwidth=0,width=250pt]{}},\\народженого(-ої)\\\raisebox{-2pt}{\TextField[name=providerdobUK,borderwidth=0,width=250pt]{}},\\що має індивідуальний номер\\\raisebox{-2pt}{\TextField[name=provideridUK,borderwidth=0,width=250pt]{}}\\ в \\\raisebox{-2pt}{\TextField[name=providerperscountryUK,borderwidth=0,width=250pt]{}}\\та діє на підставі\\\raisebox{-2pt}{\TextField[name=providerrightUK,borderwidth=0,width=250pt]{}}\\далі позначений як \textbf{ВИКОНАВЕЦЬ}.\\\textbf{ТРЕТЬОЮ ОСОБОЮ} позначено будь-яку іншу сторону, що має договірні стосунки із ЗАМОВНИКОМ, але є відмінною від ВИКОНАВЦЯ.}
-        {The agreement is established between \\\raisebox{-2pt}{\TextField[name=customernameEN,borderwidth=0,width=250pt]{}},\\registered in\\\raisebox{-2pt}{\TextField[name=customercountryEN,borderwidth=0,width=250pt]{}}\\with registry code (tax number) of \\\raisebox{-2pt}{\TextField[name=customercodeEN,borderwidth=0,width=250pt]{}}\\under the following address\\\raisebox{-2pt}{\TextField[name=customeraddr1EN,borderwidth=0,width=250pt]{}}\\\raisebox{-2pt}{\TextField[name=customeraddr2EN,borderwidth=0,width=250pt]{}}\\represented by\\\raisebox{-2pt}{\TextField[name=customerpersonEN,borderwidth=0,width=250pt]{}},\\born on\\\raisebox{-2pt}{\TextField[name=customerdobEN,borderwidth=0,width=250pt]{}},\\who has a personal identification number of\\\raisebox{-2pt}{\TextField[name=customeridEN,borderwidth=0,width=250pt]{}}\\ in \\\raisebox{-2pt}{\TextField[name=customerperscountryEN,borderwidth=0,width=250pt]{}}\\and is acting on the basis of\\\raisebox{-2pt}{\TextField[name=customerrightEN,borderwidth=0,width=250pt]{}}\\later referred to as the \textbf{CUSTOMER} on one side and \\\raisebox{-2pt}{\TextField[name=providernameEN,borderwidth=0,width=250pt]{}},\\registered in\\\raisebox{-2pt}{\TextField[name=providercountryEN,borderwidth=0,width=250pt]{}}\\with registry code (tax number) of\\\raisebox{-2pt}{\TextField[name=providercodeEN,borderwidth=0,width=250pt]{}}\\under the following address\\\raisebox{-2pt}{\TextField[name=provideraddr1EN,borderwidth=0,width=250pt]{}}\\\raisebox{-2pt}{\TextField[name=provideraddr2EN,borderwidth=0,width=250pt]{}}\\represented by\\\raisebox{-2pt}{\TextField[name=providerpersonEN,borderwidth=0,width=250pt]{}},\\born on\\\raisebox{-2pt}{\TextField[name=providerdobEN,borderwidth=0,width=250pt]{}},\\who has a personal identification number of\\\raisebox{-2pt}{\TextField[name=provideridEN,borderwidth=0,width=250pt]{}}\\ in \\\raisebox{-2pt}{\TextField[name=providerperscountryEN,borderwidth=0,width=250pt]{}}\\and is acting on the basis of\\\raisebox{-2pt}{\TextField[name=providerrightEN,borderwidth=0,width=250pt]{}}\\on another side later referred to as the \textbf{PROVIDER} with both collectively referred to as the \textbf{PARTIES}.\\ Any other party distinct from the PROVIDER that is contracted by the CUSTOMER is referred to as the \textbf{THIRD PARTY}.}
+        { \textbf{СТОРОНИ}, що уклали цю \textbf{УГОДУ} є з одного боку \\
+          \fieldline{customernameUK},\\
+          зареєстроване(-ий,-а) в\\
+          \fieldline{customercountryUK}\\
+          із кодом (податковим номером)\\
+          \fieldline{customercodeUK}\\
+          під адресою\\
+          \fieldline{customeraddr1UK}\\
+          \fieldline{customeraddr2UK}\\
+          в особі\\
+          \fieldline{customerpersonUK},\\
+          народженого(-ої)\\
+          \fieldline{customerdobUK},\\
+          що має індивідуальний номер\\
+          \fieldline{customeridUK}\\
+          в \\
+          \fieldline{customerperscountryUK}\\
+          та діє на підставі\\
+          \fieldline{customerrightUK}\\
+          далі позначений як \textbf{ЗАМОВНИК} та з іншого боку\\
+          \fieldline{providernameUK},\\
+          зареєстроване(-ий,-а) в\\
+          \fieldline{providercountryUK}\\
+          із кодом (податковим номером)\\
+          \fieldline{providercodeUK}\\
+          під адресою\\
+          \fieldline{provideraddr1UK}\\
+          \fieldline{provideraddr2UK}\\
+          в особі\\
+          \fieldline{providerpersonUK},\\
+          народженого(-ої)\\
+          \fieldline{providerdobUK},\\
+          що має індивідуальний номер\\
+          \fieldline{provideridUK}\\
+          в \\
+          \fieldline{providerperscountryUK}\\
+          та діє на підставі\\
+          \fieldline{providerrightUK}\\
+          далі позначений як \textbf{ВИКОНАВЕЦЬ}.\\
+          \textbf{ТРЕТЬОЮ ОСОБОЮ} позначено будь-яку іншу сторону, що має договірні стосунки із ЗАМОВНИКОМ, але є відмінною від ВИКОНАВЦЯ.
+        }
+        { The agreement is established between \\
+          \fieldline{customernameEN},\\
+          registered in\\
+          \fieldline{customercountryEN}\\
+          with registry code (tax number) of \\
+          \fieldline{customercodeEN}\\
+          under the following address\\
+          \fieldline{customeraddr1EN}\\
+          \fieldline{customeraddr2EN}\\
+          represented by\\
+          \fieldline{customerpersonEN},\\
+          born on\\
+          \fieldline{customerdobEN},\\
+          who has a personal identification number of\\
+          \fieldline{customeridEN}\\
+          in \\
+          \fieldline{customerperscountryEN}\\
+          and is acting on the basis of\\
+          \fieldline{customerrightEN}\\
+          later referred to as the \textbf{CUSTOMER} on one side and \\
+          \fieldline{providernameEN},\\
+          registered in\\
+          \fieldline{providercountryEN}\\
+          with registry code (tax number) of\\
+          \fieldline{providercodeEN}\\
+          under the following address\\
+          \fieldline{provideraddr1EN}\\
+          \fieldline{provideraddr2EN}\\
+          represented by\\
+          \fieldline{providerpersonEN},\\
+          born on\\
+          \fieldline{providerdobEN},\\
+          who has a personal identification number of\\
+          \fieldline{provideridEN}\\
+          in \\
+          \fieldline{providerperscountryEN}\\
+          and is acting on the basis of\\
+          \fieldline{providerrightEN}\\
+          on another side later referred to as the \textbf{PROVIDER} with both collectively referred to as the \textbf{PARTIES}.\\
+          Any other party distinct from the PROVIDER that is contracted by the CUSTOMER is referred to as the \textbf{THIRD PARTY}.}
         {}
       \clause
         {Мова та терміни}
@@ -68,8 +147,8 @@
         {Повна вартість}
         {Full price}
         {}
-        {Вартість послуг, здійснених у межах УГОДИ не перевищуватиме \raisebox{-2pt}{\TextField[name=fullpriceUK,borderwidth=0,width=75pt]{}} €. У випадку потреби здійснення послуг на суму, більше цього обмеження, СТОРОНИ укластимуть нову УГОДУ.}
-        {The price of the services provided within the AGREEMENT's scope shall not exceed \raisebox{-2pt}{\TextField[name=fullpriceEN,borderwidth=0,width=75pt]{}} €. Should the need of the service provision above this sum arise, the PARTIES shall conclude a new AGREEMENT.}
+        {Вартість послуг, здійснених у межах УГОДИ не перевищуватиме \fieldw{fullpriceUK}{75} €. У випадку потреби здійснення послуг на суму, більше цього обмеження, СТОРОНИ укластимуть нову УГОДУ.}
+        {The price of the services provided within the AGREEMENT's scope shall not exceed \fieldw{fullpriceEN}{75} €. Should the need of the service provision above this sum arise, the PARTIES shall conclude a new AGREEMENT.}
         {}
       \clause % TODO check EU directive
         {Порядок розрахунків}

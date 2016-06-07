@@ -24,40 +24,40 @@
 \newcommand\banktable[1]{
 \begin{tabular}{ | r | l | }
   \hline
-  Отримувач & \multirow{3}{*}{\raisebox{-2pt}{\TextField[name=benef#1,width=150pt,height=14pt,charsize=10pt,borderwidth=0]{}}} \\
+  Отримувач & \multirow{3}{*}{\fieldb{benef#1}} \\
   Beneficiary & \\
   Kasusaaja & \\
   \hline
-  Банк отримувача & \multirow{3}{*}{\raisebox{-2pt}{\TextField[name=bank#1,width=150pt,height=14pt,charsize=10pt,borderwidth=0]{}}} \\
+  Банк отримувача & \multirow{3}{*}{\fieldb{bank#1}} \\
   Beneficiary bank & \\
   Saaja pank & \\
   \hline
-  Відділення банку отримувача & \multirow{3}{*}{\raisebox{-2pt}{\TextField[name=branch#1,width=150pt,height=14pt,charsize=10pt,borderwidth=0]{}}} \\
+  Відділення банку отримувача & \multirow{3}{*}{\fieldb{branch#1}} \\
   Beneficiary bank branch & \\
   Saaja panga filiaal & \\
   \hline
-  IBAN & \multirow{4}{*}{\raisebox{-2pt}{\TextField[name=iban#1,width=150pt,height=12pt,charsize=8pt,borderwidth=0]{}}} \\
+  IBAN & \multirow{4}{*}{\fieldbs{iban#1}} \\
   Номе рахунку отримувача & \\
   Beneficiary account \# & \\
   Saaja konto \# & \\
   \hline
-  BIC/SWIFT банку отримувача & \multirow{3}{*}{\raisebox{-2pt}{\TextField[name=swift#1,width=150pt,height=14pt,charsize=10pt,borderwidth=0]{}}} \\
+  BIC/SWIFT банку отримувача & \multirow{3}{*}{\fieldb{swift#1}} \\
   Beneficiary bank BIC/SWIFT & \\
   Saaja panga BIC/SWIFT & \\
   \hline
-  Банк-кореспонтент & \multirow{3}{*}{\raisebox{-2pt}{\TextField[name=corrbank#1,width=150pt,height=14pt,charsize=10pt,borderwidth=0]{}}} \\
+  Банк-кореспонтент & \multirow{3}{*}{\fieldb{corrbank#1}} \\
   Correspondent bank & \\
   Korrespondentpank & \\
   \hline
-  Номер кореспондентського рахунку & \multirow{3}{*}{\raisebox{-2pt}{\TextField[name=corriban#1,width=150pt,height=12pt,charsize=8pt,borderwidth=0]{}}} \\
+  Номер кореспондентського рахунку & \multirow{3}{*}{\fieldbs{corriban#1}} \\
   Correspondent account \# & \\
   Korrespondentkonto \# & \\
   \hline
-  BIC/SWIFT банку-кореспонденту & \multirow{3}{*}{\raisebox{-2pt}{\TextField[name=corrswift#1,width=150pt,height=14pt,charsize=10pt,borderwidth=0]{}}} \\
+  BIC/SWIFT банку-кореспонденту & \multirow{3}{*}{\fieldb{corrswift#1}} \\
   Correspondent bank BIC/SWIFT & \\
   Korrespondentpangale BIC/SWIFT & \\
   \hline
-  Розташування банку-кореспонденту & \multirow{3}{*}{\raisebox{-2pt}{\TextField[name=corr#1,width=150pt,height=14pt,charsize=10pt,borderwidth=0]{}}} \\
+  Розташування банку-кореспонденту & \multirow{3}{*}{\fieldb{corr#1}} \\
   Correspondent bank location & \\
   Korrespondentpanga asukohta & \\
   \hline
