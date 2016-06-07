@@ -1,0 +1,54 @@
+%
+% Copyright 2016 Erint Labs OÜ
+%
+% Licensed under the EUPL, Version 1.1 or – as soon they
+% will be approved by the European Commission - subsequent
+% versions of the EUPL (the "Licence");
+% You may not use this work except in compliance with the
+% Licence.
+% You may obtain a copy of the Licence at:
+%
+% https://joinup.ec.europa.eu/software/page/eupl
+%
+% Unless required by applicable law or agreed to in
+% writing, software distributed under the Licence is
+% distributed on an "AS IS" basis,
+% WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+% express or implied.
+% See the Licence for the specific language governing
+% permissions and limitations under the Licence.
+%
+\documentclass[a4paper]{article}
+\usepackage[landscape,top=1cm, bottom=1.5cm, left=1cm, right=1cm]{geometry}
+% TODO: non XeLaTeX compliation support
+\usepackage[colorlinks]{hyperref}
+\usepackage{paracol}
+\usepackage{fancyref}
+\usepackage{fontspec}
+\usepackage{xltxtra}
+\usepackage{ifthen}
+\usepackage{multirow}
+\usepackage{xunicode}
+\XeTeXinputencoding utf8
+\usepackage{polyglossia}
+\setdefaultlanguage{ukrainian}
+\setotherlanguages{english,estonian}
+\setromanfont[Mapping=tex-text]{Linux Libertine}
+
+% TODO: remove color borders maybe?
+% TODO: better document class?
+% TODO: make hyperref only use English names for TOC entries
+% TODO: prevent letters in numeric fields
+% TODO: stylish small capitals
+% WARNING: current Estonian version is Google translate. DO NOT use it right now
+
+% Three column text in UK, EN, and ET
+\newcommand\freetextcommon[3]{\begin{ukrainian}#1\end{ukrainian}\switchcolumn\begin{english}#2\end{english}\switchcolumn\begin{estonian}#3\end{estonian}}
+\newcommand\freetextnoalign[3]{\freetextcommon{#1}{#2}{#3}\swtichcolumn}
+\newcommand\freetext[3]{\freetextcommon{#1}{#2}{#3}\switchcolumn*}
+% Same with section header
+\newcommand\clause[6]{\freetext{\section{#1}#4}{\section{#2}#5}{\section{#3}#6}}
+% Cute symbols
+\renewcommand\thesection{§\arabic{section}}
+% Hyperlinks to Appendixes and sections
+\newcommand\smartref[2]{\hyperref[#1]{#2\ref{#1}}}

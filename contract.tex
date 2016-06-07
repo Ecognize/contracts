@@ -18,40 +18,7 @@
 % See the Licence for the specific language governing
 % permissions and limitations under the Licence.
 %
-\documentclass[a4paper]{article}
-\usepackage[landscape,top=1cm, bottom=1.5cm, left=1cm, right=1cm]{geometry}
-% TODO: non XeLaTeX compliation support
-\usepackage[colorlinks]{hyperref}
-\usepackage{paracol}
-\usepackage{fancyref}
-\usepackage{fontspec}
-\usepackage{xltxtra}
-\usepackage{ifthen}
-\usepackage{multirow}
-\usepackage{xunicode}
-\XeTeXinputencoding utf8
-\usepackage{polyglossia}
-\setdefaultlanguage{ukrainian}
-\setotherlanguages{english,estonian}
-\setromanfont[Mapping=tex-text]{Linux Libertine}
-
-% TODO: remove color borders maybe?
-% TODO: better document class?
-% TODO: make hyperref only use English names for TOC entries
-% TODO: prevent letters in numeric fields
-% TODO: stylish small capitals
-% WARNING: current Estonian version is Google translate. DO NOT use it right now
-
-% Three column text in UK, EN, and ET
-\newcommand\freetextcommon[3]{\begin{ukrainian}#1\end{ukrainian}\switchcolumn\begin{english}#2\end{english}\switchcolumn\begin{estonian}#3\end{estonian}}
-\newcommand\freetextnoalign[3]{\freetextcommon{#1}{#2}{#3}\swtichcolumn}
-\newcommand\freetext[3]{\freetextcommon{#1}{#2}{#3}\switchcolumn*}
-% Same with section header
-\newcommand\clause[6]{\freetext{\section{#1}#4}{\section{#2}#5}{\section{#3}#6}}
-% Cute symbols
-\renewcommand\thesection{§\arabic{section}}
-% Hyperlinks to Appendixes and sections
-\newcommand\smartref[2]{\hyperref[#1]{#2\ref{#1}}}
+\input{preamble}
 
 \begin{document}
   \begin{Form}
@@ -89,6 +56,27 @@
         {}
         {СТОРОНИ підписують УГОДУ та її похідні документи за допомогою електронно-цифрового підпису, засвідченого у відповідних країнах за умови, що такий підпис вважатиметься чинним країнами, в яких СТОРОНИ є резидентами, а також у країні, призначеній для вирішення спорів між СТОРОНАМИ щодо УГОДИ та її виконання. У разі технічної, або юридичної неможливості накласти на УГОДУ електронно-цифровий підпис, УГОДА виготовляється у паперовому форматі в двох примірниках та підписується на кожній сторінці ліворуч — ЗАМОВНИКОМ, а праворуч — ВИКОНАВЦЕМ. УГОДА набуває чинності із момента її підписання обома СТОРОНАМИ.}
         {The PARTIES sign the AGREMENT and its derivative documents by means of digital signature certified by respective countries on the condition that such a signature would be considered valid in the countries the PARTIES are resident in and in the country which is designated for dispute resolution over the AGREEMENT and its execution. In the event of technical or legal inability to apply the digital signature, the AGREEMENT shall be produced on paper in two copies and signed on each page by the CUSTOMER on the left and by the PROVIDER on the right. The AGREEMENT is considered in force after the moment both of the PARTIES sign it.}
+        {}
+      \clause
+        {Вартість послуг}
+        {Service price}
+        {}
+        {Послуги оцінюватимуться відповідно до їх часу виконання. Ціна однієї години зазначена у \smartref{app:services}{додатку }. Відсутність ціни на послугу означає безоплатне виконання відповідної послуги ВИКОНАВЦЕМ. Максимальна дозволена кількість оплачуваниї годин протягом календарного тижня визначатиметься усною чи письмовою згодою між СТОРОНАМИ та фіксуватиметься за допомогою інформаційної системи ЗАМОВНИКА, яку зазначено у \smartref{sec:payment}{}. Максимальна дозволена кількість оплачуваних годин кожного тижня може бути змінена у меньший бік лише до початку понеділку відповідного тижня.}
+        {}
+        {}
+      \clause
+        {Повна вартість}
+        {Full price}
+        {}
+        {Вартість послуг, здійснених у межах УГОДИ не перевищуватиме \raisebox{-2pt}{\TextField[name=fullpriceUK,borderwidth=0,width=75pt]{}} €. У випадку потреби здійснення послуг на суму, більше цього обмеження, СТОРОНИ укластимуть нову УГОДУ.}
+        {The price of the services provided within the AGREEMENT's scope shall not exceed \raisebox{-2pt}{\TextField[name=fullpriceEN,borderwidth=0,width=75pt]{}} €. Should the need of the service provision above this sum arise, the PARTIES shall conclude a new AGREEMENT.}
+        {}
+      \clause % TODO check EU directive
+        {Порядок розрахунків}
+        {}
+        {}
+        {\label{sec:payment}Послуги виконуються за умов повної післясплати. ВИКОНАВЕЦЬ вестиме облік часу виконання у інформаційній системі ЗАМОВНИКА та складатиме рахунки-фактури на підставі показів цієї системи. Рахунок-фактура виставляється у електронній формі, містить електронно-цифровий підпис ВИКОНАВЦЯ, а за змістом відповідає вимогам \href{http://bank.gov.ua/doccatalog/document?id=19208488}{повідомлення НБУ №22-01012/46746 від 7 липня 2015 р.}, а також \href{http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0055}{директиві ЄУ 2014/55/EU від 13 жовтня 2014 р.}. Сплата ЗАМОВНИКОМ рахунку фактури визнається фактом прийняття виконання ЗАМОВНИКОМ послуг ВИКОНАВЦЯ та відсутності претензій до їх виконання. Якщо і поки це є вимаганим з боку законодавства країн, в яких СТОРОНИ є резидентами, СТОРОНИ можуть складати, підписувати та обмінюватись додатковою документацією, що підтверджує прийняття ЗАМОВНИКОМ послуг ВИКОНАВЦЯ.}
+        {}
         {}
       \clause
         {Нерозголошення}
