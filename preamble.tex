@@ -41,7 +41,8 @@
 % TODO: make hyperref only use English names for TOC entries
 % TODO: prevent letters in numeric fields
 % TODO: stylish small capitals
-% WARNING: current Estonian version is Google translate. DO NOT use it right now
+% WARNING: current Estonian version may contain machine translation.
+% DO NOT use it right now if you don't know what you're doing
 
 % Footer to contain the template
 \pagestyle{fancy}
@@ -71,10 +72,12 @@
 \newcommand\freetextcommon[3]{\begin{ukrainian}#1\end{ukrainian}\switchcolumn\begin{english}#2\end{english}\switchcolumn\begin{estonian}#3\end{estonian}}
 \newcommand\freetextnoalign[3]{\freetextcommon{#1}{#2}{#3}\swtichcolumn}
 \newcommand\freetext[3]{\freetextcommon{#1}{#2}{#3}\switchcolumn*}
+\newcommand\freetextnoindent[3]{\freetext{\noindent#1}{\noindent#2}{\noindent#3}}
 % Same with section header
 \newcommand\clause[6]{\freetext{\section{#1}#4}{\section{#2}#5}{\section{#3}#6}}
 % Cute symbols
 \renewcommand\thesection{§\arabic{section}}
+\renewcommand\thesubsection{§\arabic{section}.\arabic{subsection}}
 % Hyperlinks to Appendixes and sections
 \newcommand\smartref[2]{\hyperref[#1]{#2\ref{#1}}}
 % This is lame, but I have no will to make it better

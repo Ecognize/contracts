@@ -1,0 +1,194 @@
+%
+% Copyright 2016 Erint Labs OÜ
+%
+% Licensed under the EUPL, Version 1.1 or – as soon they
+% will be approved by the European Commission - subsequent
+% versions of the EUPL (the "Licence");
+% You may not use this work except in compliance with the
+% Licence.
+% You may obtain a copy of the Licence at:
+%
+% https://joinup.ec.europa.eu/software/page/eupl
+%
+% Unless required by applicable law or agreed to in
+% writing, software distributed under the Licence is
+% distributed on an "AS IS" basis,
+% WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+% express or implied.
+% See the Licence for the specific language governing
+% permissions and limitations under the Licence.
+%
+\input{preamble}
+
+% Neat box for votings
+\newcommand\voteline[2]{#1:&\fieldwhs{#2}{30}{10}{8}\\}
+\newcommand\votebox[4]{\begin{tabular}{r l}\voteline{#2}{#1yes}\voteline{#3}{#1no}\voteline{#4}{#2abs}\end{tabular}}
+\newcommand\voteUK[1]{\votebox{#1UK}{За}{Проти}{Утрималось}}
+\newcommand\voteEN[1]{\votebox{#1EN}{For}{Against}{Abstained}}
+\newcommand\voteET[1]{\votebox{#1ET}{Poolt}{Vastu}{Erapooletuid}}
+
+% TODO: generalise minutes template
+
+\begin{document}
+  \begin{Form}
+    \title{Протокол зібрання вкладників / Shareholder meeting minutes / Osanike kooosoleku protokoll\\№ \fieldrws{minuteno}{6}{250}{14}}
+    % TODO: using author field for place is ugly, let's use another docuement class in future
+    \author{\fieldterm{placeUK} / \fieldterm{placeEN} / \fieldterm{placeET}}
+    \date{\today / \textenglish{\today} / \textestonian{\today}}
+    \maketitle
+    \thispagestyle{fancy}
+
+    \begin{paracol}{3}
+      \clause % TODO do we have to support people who refused an ID number btw? Add this if necessary
+        {Преамбула}
+        {Preamble}
+        {Preambula}
+        { Назва суб’єкта господарювання:\\
+          \fieldline{companynameUK}\\
+          Реєстраційний код та країна:\\
+          \fieldline{companycodeUK}\\
+          Юридична адреса:\\
+          \fieldline{companyaddress1UK}\\
+          \fieldline{companyaddress2UK}\\
+          Голова зібрання:\\
+          \fieldline{chairmanUK}\\
+          Секретар зібрання:\\
+          \fieldline{secretaryUK}\\
+          Мова зібрання:\\
+          \fieldline{languageUK}
+        }
+        { Company name:\\
+        \fieldline{companynameEN}\\
+          Registry entry code and country:\\
+          \fieldline{companycodeEN}\\
+          Official seat:\\
+          \fieldline{companyaddress1EN}\\
+          \fieldline{companyaddress2EN}\\
+          Minutes chairman:\\
+          \fieldline{chairmanEN}\\
+          Recording secretary:\\
+          \fieldline{secretaryEN}\\
+          Мinutes language:\\
+          \fieldline{languageEN}
+        }
+        { Osaühingu ärinimi:\\
+          \fieldline{companynameET}\\
+          Osaühingu registrikood ja riik:\\
+          \fieldline{companycodeET}\\
+          Osaühingu asukoht:\\
+          \fieldline{companyaddress1ET}\\
+          \fieldline{companyaddress2ET}\\
+          Koosoleku juhataja:\\
+          \fieldline{chairmanET}\\
+          Koosoleku protokollija:\\
+          \fieldline{secretaryET}\\
+          Koosoleku keel:\\
+          \fieldline{languageET}
+        }
+
+      \clause
+        {Кворум}
+        {Quorum}
+        {Kvoorum}
+        {Зібрання відвідало \fieldw{participantsUK}{25} учасників (\smartref{app:attend}{додаток }), що представляють \fieldw{votesUK}{25}\% голосів. Отже, на Зібранні достягнуто кворуму.}
+        {The meeting was attended by \fieldw{participantsET}{25} participants (\smartref{app:attend}{appendix }), who represent \fieldw{votesET}{25}\% of voting rights. Therefore the Meeting has reached a quorum.}
+        {Koosolekul osales \fieldw{participantsET}{25} osalejat (\smartref{app:attend}{lisa }), kes esindavad \fieldw{votesET}{25}\% osadega esindatud häältest. Seega on Koosolekul olemas otsustusvõimeline kvoorum.}
+
+      \clause
+        {Порядок денний}
+        {Agenda}
+        {Päevakord}
+        { \subsection{Зупинення складу правління}
+          Визнати нечинним склад поточний склад правління, що був ухвалений у:\\
+          \fieldline{previous1UK}\\
+          \fieldline{previous2UK}\\
+          датованому(-ій):\\
+          \fieldline{previousdateUK}
+          \subsection{Призначення нового складу правління}
+          Призначити до складу правління осіб, визначених у \smartref{app:management}{додатку } безстроково із наступного календарного дня після для проведення цього Зібрання.
+        }
+        { \subsection{Suspension of the management board}
+          Suspend the current management board members which were elected by:\\
+          \fieldline{previous1EN}\\
+          \fieldline{previous2EN}\\
+          dated:\\
+          \fieldline{previousdateEN}
+          \subsection{Election to the new management board}
+          Elect the persons indicated in the \smartref{app:management}{appendix } without a term starting from the next callendar day following the day of this Meeting.
+        }
+        { \subsection{Sõidu juhatuse}
+          Peatada praeguse juhatuse liikmed, mis valiti:\\
+          \fieldline{previous1ET}\\
+          \fieldline{previous2ET}\\
+          dateeritud:\\
+          \subsection{Valimiste uue juhatuse}
+          \fieldline{previousdateET}
+          Valida isikud märgitud \smartref{app:management}{liites } tähtajatult alates järgmise kalendriaasta järgnevast päevast selle Koosolekul.
+        }
+
+      \clause
+        {Рішення}
+        {Resolutions}
+        {Otsused}
+        { \subsection{Зупинення складу правління}
+          \voteUK{suspend}
+          \subsection{Призначення нового складу правління}
+          \voteUK{appoint}
+        }
+        { \subsection{Suspension of the management board}
+          \voteEN{suspend}
+          \subsection{Election to the new management board}
+          \voteEN{appoint}
+        }
+        { \subsection{Sõidu juhatuse}
+          \voteET{suspend}
+          \subsection{Valimiste uue juhatuse}
+          \voteET{appoint}
+        }
+
+      \freetextnoindent
+        {\\Рішення Зібрання прийняті у відповідності до закону та процедур прийняття рішень, зазначених у статуті Суб’єкта господарювання.}
+        {\\The Meeting's decisions were adopted in compliance with the law and the decision making procedures indicated in the Company's articles of association.}
+        {\\Koosolekul võeti otsused vastu järgides seaduses ja Osaühingu põhikirjas sätestatud otsuste vastuvõtmise korda.}
+
+    \end{paracol}
+  \appendix
+  \section{На зібранні присутні\\The meeting was attended by\\Koosolekul osalesid}
+  \label{app:attend}
+  \newcounter{n}
+  \setcounter{n}{35}
+  \newcounter{i}
+  \begin{tabular}{ | r | l | l | l | l | }
+    \hline
+      & Ім’я учасника (Кирилиця) &  Ім’я учасника (Латинка) & Ідентифікаційний номер та країна & Права голосу, \% \\
+      & Participant's name (Cyrillic) & Participant's name (Latin) & Idetification number and country & Vote rights, \% \\
+      № & Osaleja nimi (Kirillitsa) & Osaleja nimi (Ladina) & Isikukood ja Riik & Hääleõiguse, \% \\
+    \hline
+      \setcounter{i}{0}
+      \myloop{i}{n}{ \arabic{i} & \fieldtw{votercyr\arabic{i}}{150} &
+                     \fieldtw{voterlat\arabic{i}}{150} &
+                     \fieldtw{votercode\arabic{i}}{200} &
+                     \fieldt{votervotes\arabic{i}} }
+      \hline
+  \end{tabular}
+  \pagebreak
+  \section{На зібранні присутні\\The meeting was attended by\\Koosolekul osalesid}
+  \label{app:management}
+  \setcounter{n}{35}
+  \begin{tabular}{ | r | l | l | l | l | }
+    \hline
+      & Ім’я особи (Кирилиця) &  Ім’я особи (Латинка) & Ідентифікаційний номер та країна & Дата народження \\
+      & Person's name (Cyrillic) & Person's name (Latin) & Idetification number and country & Date of birth \\
+      № & Isiku nimi (Kirillitsa) & Isiku nimi (Ladina) & Isikukood ja Riik & Sünnikuupäev \\
+    \hline
+      \setcounter{i}{0}
+      \myloop{i}{n}{ \arabic{i} & \fieldtw{managercyr\arabic{i}}{150} &
+                     \fieldtw{managerlat\arabic{i}}{150} &
+                     \fieldtw{managercode\arabic{i}}{200} &
+                     \fieldtw{managerdob\arabic{i}}{75} }
+      \hline
+  \end{tabular}
+  \pagebreak
+  \input{appendix_correspondence}
+  \end{Form}
+\end{document}
