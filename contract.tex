@@ -30,10 +30,7 @@
     \thispagestyle{fancy}
 
     \begin{paracol}{3}
-      \clause % TODO do we have to support people who refused an ID number btw? Add this if necessary
-        {Преамбула} % TODO eliminate hanging line
-        {Preamble} % TODO change wording to introduce AGREEMENT
-        {}
+      \freetext % TODO do we have to support people who refused an ID number btw? Add this if necessary
         { \textbf{СТОРОНИ}, що уклали цю \textbf{УГОДУ} є з одного боку \\
           \fieldline{customernameUK},\\
           зареєстроване(-ий,-а) в\\
@@ -172,6 +169,122 @@
         {ВИКОНАВЕЦЬ передаватиме ЗАМОВНИКУ майнові авторські права на результати виконання послуг згідно до УГОДИ, такі як програмний код, креслення, звіти, моделі, графічні матеріали, дані досліджень, документація тощо, але не обмежуючись цим переліком. ВИКОНАВЕЦЬ втім матиме право вважатись автором цього матеріалу та використовувати його в цілях портфоліо, якщо це не суперечить \smartref{sec:nda}{}. У випадку, якщо ВИКОНАВЕЦЬ виконує послуги на користь ТРЕТЬОЇ ОСОБИ від імені ЗАМОВНИКА, домовленість ЗАМОВНИКА та ТРЕТЬОЇ ОСОБИ щодо порядку передачі авторських прав матиме приорітет над положеннями цієї угоди.}
         {The PROVIDER shall transfer the copyright over the results of the services provided in the scope of AGREEMENT including, but not limited to software source code, schematics, reports, models, graphical material, research data, documentation \emph{et ce\-te\-ra} to the CUSTOMER. The PROVIDER however shall be considered the author of the respective material and allowed to use it in the purposes of porfolio unless such act would contradcit \smartref{sec:nda}{}. In cases when the PROVIDER provides the services to the THIRD PARTY on the CUSTOMER's behalf, the agreement on copyright transfer between the THIRD PARTY and the CUSTOMER would take priority over the provisions of this agreement.}
         {}
+      \clausenewpage
+        {Підписанти}
+        {Signatories}
+        {}
+        {\textbf{ЗАМОВНИК}\\
+        \fieldline{customernameUK}\\
+        Код (податковий номер):\\
+        \fieldline{customercodeUKETET}\\
+        Країна:\\
+        \fieldline{customercountryUK}\\
+        Юридична адреса:\\
+        \fieldline{customeraddr1UK}\\
+        \fieldline{customeraddr2UK}\\
+        \\
+        Що його представляє:\\
+        \fieldline{customerpersonUK}\\
+        На підставі\\
+        \fieldline{customerrightUK}\\
+        Індивідуальний код представника:\\
+        \fieldline{customeridUK}\\
+        Країна, що надала код:\\
+        \fieldline{customerperscountryUK}\\
+        \\
+        \textbf{ВИКОНАВЕЦЬ}\\
+        \fieldline{providernameUK}\\
+        Код (податковий номер):\\
+        \fieldline{providercodeUKETET}\\
+        Країна:\\
+        \fieldline{providercountryUK}\\
+        Юридична адреса:\\
+        \fieldline{provideraddr1UK}\\
+        \fieldline{provideraddr2UK}\\
+        \\
+        Що його представляє:\\
+        \fieldline{providerpersonUK}\\
+        На підставі\\
+        \fieldline{providerrightUK}\\
+        Індивідуальний код представника:\\
+        \fieldline{provideridUKENET}\\
+        Країна, що надала код:\\
+        \fieldline{providerperscountryUK}\\
+        }
+        {\textbf{CUSTOMER}\\
+        \fieldline{customernameEN}\\
+        Code (tax number):\\
+        \fieldline{customercodeUKETET}\\
+        Country:\\
+        \fieldline{customercountryEN}\\
+        Legal address:\\
+        \fieldline{customeraddr1EN}\\
+        \fieldline{customeraddr2EN}\\
+        \\
+        Represented by:\\
+        \fieldline{customerpersonENET}\\
+        On the basis of\\
+        \fieldline{customerrightEN}\\
+        Representant's individual number:\\
+        \fieldline{customeridUKENET}\\
+        Country which issued the number:\\
+        \fieldline{customerperscountryEN}\\
+        \\
+        \textbf{PROVIDER}\\
+        \fieldline{providernameEN}\\
+        Code (tax number):\\
+        \fieldline{providercodeUKETET}\\
+        Country:\\
+        \fieldline{providercountryEN}\\
+        Legal address:\\
+        \fieldline{provideraddr1EN}\\
+        \fieldline{provideraddr2EN}\\
+        \\
+        Represented by:\\
+        \fieldline{providerpersonENET}\\
+        On the basis of\\
+        \fieldline{providerrightEN}\\
+        Representant's individual number:\\
+        \fieldline{provideridUKENET}\\
+        Country which issued the number:\\
+        \fieldline{providerperscountryEN}\\}
+        {\textbf{@}\\
+        \fieldline{customernameEN}\\
+        @:\\
+        \fieldline{customercodeUKETET}\\
+        @:\\
+        \fieldline{customercountryEN}\\
+        @:\\
+        \fieldline{customeraddr1EN}\\
+        \fieldline{customeraddr2EN}\\
+        \\
+        @:\\
+        \fieldline{customerpersonENET}\\
+        @\\
+        \fieldline{customerrightET}\\
+        @\\
+        \fieldline{customeridUKENET}\\
+        @:\\
+        \fieldline{customerperscountryET}\\
+        \\
+        \textbf{@}\\
+        \fieldline{providernameET}\\
+        @:\\
+        \fieldline{providercodeUKETET}\\
+        @:\\
+        \fieldline{providercountryET}\\
+        @:\\
+        \fieldline{provideraddr1ET}\\
+        \fieldline{provideraddr2ET}\\
+        \\
+        @:\\
+        \fieldline{providerpersonENET}\\
+        @\\
+        \fieldline{providerrightET}\\
+        @:\\
+        \fieldline{provideridUKENET}\\
+        @:\\
+        \fieldline{providerperscountryET}\\}
     \end{paracol}
   \appendix
   \input{appendix_correspondence}
