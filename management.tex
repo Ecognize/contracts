@@ -106,6 +106,12 @@
           \fieldline{previousdateUK}
           \subsection{Призначення нового складу правління}
           Призначити членами правління осіб, визначених у \smartref{app:management}{додатку }, безстроково з наступного календарного дня після дня проведення цього Зібрання.
+          \subsection{Зміна назви компанії}
+          Визнати \fieldw{name}{75} як нову назву компанії.
+          \subsection{Зміна статутного капіталу}
+          Призначити новий розмір статутного капіталу у розмірі \fieldw{capital}{75} €.
+          \subsection{Перерозподіл долей в компанії}
+          Перерозподілити долі в компанії у відповідності до \smartref{app:shares}{додатку }. Долі вважати переданими у дар.
         }
         { \subsection{Suspension of the management board}
           Suspend the current management board elected by:\\
@@ -115,6 +121,12 @@
           \fieldline{previousdateEN}
           \subsection{Election to the new management board}
           Elect the persons indicated in the \smartref{app:management}{appendix } without a term starting from the next callendar day following the day of this Meeting.
+          \subsection{Company name change}
+          Acknowledge \fieldw{name}{75} as the new name for the company.
+          \subsection{Legal capital change}
+          Change the amount of the company's legal capital to \fieldw{capital}{75} €.
+          \subsection{Company shares redistribution}
+          Redistribute the shares of the company in accordance with \smartref{app:shares}{appendix }. Shares are to be considered gifted.
         }
         { \subsection{Sõidu juhatuse}
           Peatada praeguse juhatuse liikmed, mis valiti:\\
@@ -124,8 +136,14 @@
           \fieldline{previousdateET}
           \subsection{Valimiste uue juhatuse}
           Valida isikud märgitud \smartref{app:management}{liites } tähtajatult alates järgmise kalendriaasta järgnevast päevast selle Koosolekul.
+          \subsection{Osaühingu ärinimi muutmine}
+          Acknowledge \fieldw{name}{75} as the new name for the company.
+          \subsection{Osakapitali muutmine}
+          Change the amount of the company's legal capital to \fieldw{capital}{75} €.
+          \subsection{Redistribute company shares}
+          Redistribute the shares of the company in accordance with \smartref{app:shares}{appendix }. Shares are to be considered gifted.
         }
-
+      \multibreak
       \clause
         {Рішення}
         {Resolutions}
@@ -134,16 +152,34 @@
           \voteUK{suspend}
           \subsection{Призначення нового складу правління}
           \voteUK{appoint}
+          \subsection{Зміна назви компанії}
+          \voteUK{name}
+          \subsection{Зміна статутного капіталу}
+          \voteUK{capital}
+          \subsection{Перерозподіл долей в компанії}
+          \voteUK{shares}
         }
         { \subsection{Suspension of the management board}
           \voteEN{suspend}
           \subsection{Election to the new management board}
           \voteEN{appoint}
+          \subsection{Company name change}
+          \voteEN{name}
+          \subsection{Legal capital change}
+          \voteEN{capital}
+          \subsection{Company shares redistribution}
+          \voteEN{shares}
         }
         { \subsection{Sõidu juhatuse}
           \voteET{suspend}
           \subsection{Valimiste uue juhatuse}
           \voteET{appoint}
+          \subsection{Osaühingu ärinimi muutmine}
+          \voteET{name}
+          \subsection{Osakapitali muutmine}
+          \voteET{capital}
+          \subsection{Перерозподіл долей в компанії}
+          \voteET{shares}
         }
 
       \freetextnoindent
@@ -186,6 +222,23 @@
                      \fieldtw{managerlat\arabic{i}}{150} &
                      \fieldtw{managercode\arabic{i}}{200} &
                      \fieldtw{managerdob\arabic{i}}{75} }
+      \hline
+  \end{tabular}
+  \pagebreak
+  \section{Новий розподіл долей в компанії\\The new distribution of company shares\\Koosolekul osalesid}
+  \label{app:shares}
+  \setcounter{n}{35}
+  \begin{tabular}{ | r | l | l | l | l | }
+    \hline
+      & Ім’я учасника (Кирилиця) &  Ім’я учасника (Латинка) & Ідентифікаційний номер та країна & Доля, \% \\
+      & Participant's name (Cyrillic) & Participant's name (Latin) & Idetification number and country & Share, \% \\
+      № & Osaleja nimi (Kirillitsa) & Osaleja nimi (Ladina) & Isikukood ja Riik & Osa, \% \\
+    \hline
+      \setcounter{i}{0}
+      \myloop{i}{n}{ \arabic{i} & \fieldtw{votercyr\arabic{i}}{150} &
+                     \fieldtw{voterlat\arabic{i}}{150} &
+                     \fieldtw{votercode\arabic{i}}{200} &
+                     \fieldt{votervotes\arabic{i}} }
       \hline
   \end{tabular}
   \pagebreak
