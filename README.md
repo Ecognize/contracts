@@ -2,7 +2,7 @@
 Company-Contractor agreement templates
 
 # Font requirements
-- [Linux Libertine](http://www.linuxlibertine.org/)
+- [Libertinus](https://github.com/khaledhosny/libertinus)
 
 # Package requirements
 - `paracol`
