@@ -42,7 +42,7 @@
       \clause % TODO do we have to support people who refused an ID number btw? Add this if necessary
         {Преамбула}
         {Preamble}
-        {Preambula}
+        {Preambul}
         { Назва суб’єкта господарювання:\\
           \fieldline{companynameUK}\\
           Реєстраційний код та країна:\\
@@ -128,20 +128,20 @@
           \subsection{Company shares redistribution}
           Redistribute the shares of the company in accordance with \smartref{app:shares}{appendix }. Shares are to be considered gifted.
         }
-        { \subsection{Sõidu juhatuse}
-          Peatada praeguse juhatuse liikmed, mis valiti:\\
+        { \subsection{Osaühingu juhatuse laialisaatmine}
+          Laiali saata praeguse juhatuse liikmed, kes valiti:\\
           \fieldline{previous1ET}\\
           \fieldline{previous2ET}\\
           dateeritud:\\
           \fieldline{previousdateET}
-          \subsection{Valimiste uue juhatuse}
-          Valida isikud märgitud \smartref{app:management}{liites } tähtajatult alates järgmise kalendriaasta järgnevast päevast selle Koosolekul.
-          \subsection{Osaühingu ärinimi muutmine}
-          Acknowledge \fieldw{name}{75} as the new name for the company.
+          \subsection{Uue juhatuse valimine}
+          Valida \smartref{app:management}{liites } märgitud  tähtajatult alates Kooseleku päevale järgnevast kalendripäevast.
+          \subsection{Osaühingu ärinime muutmine}
+          Kinnitada \fieldw{name}{75} kui osaühingu uus nimi.
           \subsection{Osakapitali muutmine}
-          Change the amount of the company's legal capital to \fieldw{capital}{75} €.
-          \subsection{Redistribute company shares}
-          Redistribute the shares of the company in accordance with \smartref{app:shares}{appendix }. Shares are to be considered gifted.
+          Osaühingu osakapitali muutmine summas \fieldw{capital}{75} €.
+          \subsection{Osaühingu osakute ümberjagamine}
+          Osaühingu osakute ümberjagamine vastavalt \smartref{app:shares}{liites } väljatoodule. Osakuid käsitleda, kui kingitust.
         }
       \multibreak
       \clause
@@ -170,22 +170,22 @@
           \subsection{Company shares redistribution}
           \voteEN{shares}
         }
-        { \subsection{Sõidu juhatuse}
+        { \subsection{Juhatuse laialisaatmine}
           \voteET{suspend}
-          \subsection{Valimiste uue juhatuse}
+          \subsection{Uue juhatuse valimine}
           \voteET{appoint}
-          \subsection{Osaühingu ärinimi muutmine}
+          \subsection{Osaühingu ärinime muutmine}
           \voteET{name}
           \subsection{Osakapitali muutmine}
           \voteET{capital}
-          \subsection{Перерозподіл долей в компанії}
+          \subsection{Osaühingu osakapitali ümberjagamine}
           \voteET{shares}
         }
 
       \freetextnoindent
         {\\Рішення Зібрання прийняті у відповідності до закону та процедур прийняття рішень, зазначених у статуті Суб’єкта господарювання.}
         {\\The Meeting's decisions were adopted in compliance with the law and the decision making procedures indicated in the Company's articles of association.}
-        {\\Koosolekul võeti otsused vastu järgides seaduses ja Osaühingu põhikirjas sätestatud otsuste vastuvõtmise korda.}
+        {\\Koosolekul võeti otsused vastu järgides seadusi ja Osaühingu põhikirjas sätestatud otsuste vastuvõtmise korda.}
 
     \end{paracol}
   \appendix
@@ -198,7 +198,7 @@
     \hline
       & Ім’я учасника (Кирилиця) &  Ім’я учасника (Латинка) & Ідентифікаційний номер та країна & Права голосу, \% \\
       & Participant's name (Cyrillic) & Participant's name (Latin) & Idetification number and country & Vote rights, \% \\
-      № & Osaleja nimi (Kirillitsa) & Osaleja nimi (Ladina) & Isikukood ja Riik & Hääleõiguse, \% \\
+      № & Osaleja nimi (Kirillitsa) & Osaleja nimi (Ladina) & Isikukood ja Riik & Hääleõigus, \% \\
     \hline
       \setcounter{i}{0}
       \myloop{i}{n}{ \arabic{i} & \fieldtw{votercyr\arabic{i}}{150} &
@@ -232,7 +232,7 @@
     \hline
       & Ім’я учасника (Кирилиця) &  Ім’я учасника (Латинка) & Ідентифікаційний номер та країна & Доля, \% \\
       & Participant's name (Cyrillic) & Participant's name (Latin) & Idetification number and country & Share, \% \\
-      № & Osaleja nimi (Kirillitsa) & Osaleja nimi (Ladina) & Isikukood ja Riik & Osa, \% \\
+      № & Osaleja nimi (Kirillitsa) & Osaleja nimi (Ladina) & Isikukood ja Riik & Osas, \% \\
     \hline
       \setcounter{i}{0}
       \myloop{i}{n}{ \arabic{i} & \fieldtw{votercyr\arabic{i}}{150} &
