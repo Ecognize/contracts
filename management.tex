@@ -23,9 +23,9 @@
 % Neat box for votings
 \newcommand\voteline[2]{#1:&\fieldwhs{#2}{30}{10}{8} \%\\}
 \newcommand\votebox[4]{\begin{tabular}{r l}\voteline{#2}{#1yes}\voteline{#3}{#1no}\voteline{#4}{#1abs}\end{tabular}}
-\newcommand\voteUK[1]{\votebox{#1UK}{За}{Проти}{Утрималось}}
-\newcommand\voteEN[1]{\votebox{#1EN}{For}{Against}{Abstained}}
-\newcommand\voteET[1]{\votebox{#1ET}{Poolt}{Vastu}{Erapooletuid}}
+\newcommand\voteUK[1]{\votebox{#1}{За}{Проти}{Утрималось}}
+\newcommand\voteEN[1]{\votebox{#1}{For}{Against}{Abstained}}
+\newcommand\voteET[1]{\votebox{#1}{Poolt}{Vastu}{Erapooletuid}}
 
 % TODO: generalise minutes template
 
@@ -90,9 +90,9 @@
         {Кворум}
         {Quorum}
         {Kvoorum}
-        {Зібрання відвідало \fieldw{participantsUK}{25} учасників (\smartref{app:attend}{додаток }), що представляють \fieldw{votesUK}{25}\% голосів. Отже, на Зібранні достягнуто кворуму.}
-        {The meeting was attended by \fieldw{participantsEN}{25} participants (\smartref{app:attend}{appendix }), who represent \fieldw{votesEN}{25}\% of voting rights. Therefore the Meeting has reached a quorum.}
-        {Koosolekul osales \fieldw{participantsET}{25} osalejat (\smartref{app:attend}{lisa }), kes esindavad \fieldw{votesET}{25}\% osadega esindatud häältest. Seega on Koosolekul olemas otsustusvõimeline kvoorum.}
+        {Зібрання відвідало \fieldw{participants}{25} учасників (\smartref{app:attend}{додаток }), що представляють \fieldw{votes}{25}\% голосів. Отже, на Зібранні достягнуто кворуму.}
+        {The meeting was attended by \fieldw{participants}{25} participants (\smartref{app:attend}{appendix }), who represent \fieldw{votes}{25}\% of voting rights. Therefore the Meeting has reached a quorum.}
+        {Koosolekul osales \fieldw{participants}{25} osalejat (\smartref{app:attend}{lisa }), kes esindavad \fieldw{votes}{25}\% osadega esindatud häältest. Seega on Koosolekul olemas otsustusvõimeline kvoorum.}
 
       \clause
         {Порядок денний}
@@ -235,10 +235,10 @@
       № & Osaleja nimi (Kirillitsa) & Osaleja nimi (Ladina) & Isikukood ja Riik & Osas, \% \\
     \hline
       \setcounter{i}{0}
-      \myloop{i}{n}{ \arabic{i} & \fieldtw{votercyr\arabic{i}}{150} &
-                     \fieldtw{voterlat\arabic{i}}{150} &
-                     \fieldtw{votercode\arabic{i}}{200} &
-                     \fieldt{votervotes\arabic{i}} }
+      \myloop{i}{n}{ \arabic{i} & \fieldtw{sharecyr\arabic{i}}{150} &
+                     \fieldtw{sharelat\arabic{i}}{150} &
+                     \fieldtw{sharecode\arabic{i}}{200} &
+                     \fieldt{sharevotes\arabic{i}} }
       \hline
   \end{tabular}
   \pagebreak
