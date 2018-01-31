@@ -1,0 +1,66 @@
+\input{preamble}
+\usepackage{background}
+
+\begin{document}
+    \backgroundsetup{contents={\includegraphics[width=0.3cm]{ecognize.pdf}},angle=0,position={0,0}}
+
+    \begin{Form}
+    \title{Invoice № \fieldrws{invoiceno}{6}{250}{14}\\Date: \fieldrws{invoicedate}{6}{70}{14} Currency: \fieldrws{invoicecur}{6}{70}{14}}
+    \date{}
+    \maketitle
+    \thispagestyle{fancy}
+    \pagenumbering{gobble}
+
+    % TODO: put the icon in preamble?
+
+    % hack
+    \vskip -2cm
+
+    \begin{paracol}{2}
+        \section*{Customer}
+        \noindent\fieldw{cust1}{250}\\
+        \fieldw{cust2}{250}\\
+        \fieldw{cust3}{250}\\
+        \fieldw{cust4}{250}\\
+        \fieldw{cust5}{250}\\
+
+        \switchcolumn
+        \section*{Supplier}
+        \noindent\fieldw{supl1}{250}\\
+        \fieldw{supl2}{250}\\
+        \fieldw{supl3}{250}\\
+        \fieldw{supl4}{250}\\
+        \fieldw{supl5}{250}
+    \end{paracol}
+
+    \newcounter{n}
+    \setcounter{n}{20}
+    \newcounter{i}
+    \begin{tabular}{ | r | l | l | l | l | l | l | l | l | }
+        \hline
+        & \textbf{EMTAK 2008} & Goods description / & & & &  & &  \\
+        № & \textbf{NACE Rev.2} & \textbf{Service description} & \textbf{Unit} & \textbf{Price} & \textbf{Quantity} & \textbf{Amount} & \textbf{VAT \%} & \textbf{VAT} \\
+        \hline
+        \setcounter{i}{0}
+        \myloop{i}{n}{\arabic{i} &
+        \fieldt{emtak\arabic{i}} & \fieldtw{desc\arabic{i}}{350} & \fieldt{unit\arabic{i}} & \fieldt{price\arabic{i}} & \fieldt{quanity\arabic{i}} & \fieldt{amount\arabic{i}} & \fieldt{vatp\arabic{i}} & \fieldt{vat\arabic{i}}
+        }
+        \hline
+    \end{tabular}
+
+    \vskip 1cm
+    \begin{paracol}{2}
+        \begin{tabular}{ r l }
+            \textbf{Total amount:} & \fieldt{totalht} \\
+            \textbf{Total VAT:} & \fieldt{totalvat} \\
+            \textbf{Total with VAT:} & \fieldt{totalttc} \\
+        \end{tabular}
+        \switchcolumn
+        \begin{tabular}{l l l}
+            \textbf{BIC / SWIFT} & \textbf{IBAN account number} & \textbf{Bank name}\\
+            \fieldtw{swiftcode}{60} & \fieldtw{ibancode}{200} & \fieldtw{bankname}{70}
+        \end{tabular}
+    \end{paracol}
+
+    \end{Form}
+\end{document}
