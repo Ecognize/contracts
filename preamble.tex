@@ -41,7 +41,11 @@
 % TODO: better document class?
 % TODO: make hyperref only use English names for TOC entries
 % TODO: prevent letters in numeric fields
-% TODO: stylish small capitals
+
+% TODO: cyrillic small caps depend on: khaledhosny/libertinus#44 providing a faux option
+% Courtesy of: https://tex.stackexchange.com/questions/55664/fake-small-caps-with-xetex-fontspec
+\newcommand{\fauxsc}[1]{{\footnotesize \uppercase{#1}}}
+
 % WARNING: current Estonian version may contain machine translation.
 % DO NOT use it right now if you don't know what you're doing
 
