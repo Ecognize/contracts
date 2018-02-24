@@ -21,6 +21,11 @@
 \input{preamble}
 
 \begin{document}
+  % We are stylish
+  % TODO: generalise
+  \backgroundsetup{contents={\includegraphics[width=0.3cm]{ecognize.pdf}},angle=0,position={0,0}}
+
+
   \begin{Form}
     \title{Угода про надання послуг / Service provision agreement / Töövõtuleping\\№ \fieldrws{contractno}{6}{250}{14}}
     % TODO: using author field for place is ugly, let's use another docuement class in future
@@ -72,22 +77,37 @@
         {Предмет}
         {Object}
         {Eesti}
-        {С\fauxsc{торони} домовляються про те, що \fauxsc{виконавець} \textit{має} виконувати, а \fauxsc{замовник} \textit{має} приймати та у разі належного виконання оплачуватиме послуги, зазначені у \smartref{app:services}{додатку }. Послуги \textit{можуть} виконуватимуться на користь \fauxsc{замовника} безпосередьно, або на користь \fauxsc{третьої сторони}, із якою \fauxsc{замовник} має відповідну \fauxsc{угоду} або \fauxsc{домовленність}.}
-        {The \textsc{parties} agree that the \textsc{provider} \textit{shall} provide while the \textsc{customer} \textit{shall} accept and pay in the case of the the diligent provision of the services indicated in \smartref{app:services}{appendix }. The services \textit{may} be provided in favour of the \textsc{customer} directly or to a \textsc{third party} with which the \textsc{customer} has a respective \textsc{agreement} or \textsc{arrangement}.}
+        {С\fauxsc{торони} домовляються про те, що \fauxsc{виконавець} \textit{має} виконувати, а \fauxsc{замовник} \textit{має} приймати та у разі \emph{належного виконання} оплачуватиме послуги, зазначені у \smartref{app:services}{додатку }. Послуги \textit{можуть} виконуватимуться на користь \fauxsc{замовника} безпосередьно, або на користь \fauxsc{третьої сторони}, із якою \fauxsc{замовник} має відповідну \fauxsc{угоду} або \fauxsc{домовленність}.
+
+        \subsection{Належне виконання}
+        Під \emph{належним виконанням} \fauxsc{сторони} розуміють виконання послуги відповідно до технічного опису завдання, яке \fauxsc{замовник} передає \fauxsc{виконавцеві} у усній, матеріальній або електронній формі, що було здійснено не пізніше визначеного крайнього терміну. Якщо такий термін не визначений прямо, \fauxsc{сторони} \emph{мають} вважати один календарний місяць з часу отрмання технічного опису завдання крайнім терміном за замовченням.
+        }
+        {The \textsc{parties} agree that the \textsc{provider} \textit{shall} provide while the \textsc{customer} \textit{shall} accept and pay in the case of the the diligent provision of the services indicated in \smartref{app:services}{appendix }. The services \textit{may} be provided in favour of the \textsc{customer} directly or to a \textsc{third party} with which the \textsc{customer} has a respective \textsc{agreement} or \textsc{arrangement}.
+
+        \subsection{Diligent priovision}
+        The \emph{diligent provision} is understood by the \textsc{parties} as the execution of service according to the technical task description that the \textsc{customer} supplies to the \textsc{provider} in oral, material or electronic form that was complete before the deadline specified. In case the term is not explicitly defined, the \textsc{parties} \emph{shall} consider one calendar month from the date when the technical description was recevied to be a default deadline.
+        }
         {Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque arcu leo, malesuada vitae eleifend vitae, ultrices quis nulla. Curabitur eget pharetra tortor. Phasellus nisi massa, facilisis sed dui vestibulum, maximus malesuada mauris. Duis dapibus consectetur tellus, a ornare lacus porta a.}
+      \clase
+        {Ціна}
+        {Price}
+        {Eesti}
+        {Одиницею виміру наданих послуг є година часу, витраченого на їх надання. Ціна однієї години зазначена у \smartref{app:services}{додатку }. Відсутність ціни на послугу, або її нульове значення означає згоду на безоплатне виконання відповідної послуги \fauxsc{виконавцем}.}
+        {An hour of time spent for the service provision is to be considered the unit of services provided. \smartref{app:services}{Appendix } determines the hourly price. The lack of the price for the service or its zero value means that \textsc{provider} agrees to supply the respective service free of charge.}
+        {}
       \clause
         {Кількість}
         {Quantity}
         {Eesti}
-        {Одиницею виміру наданих послуг є година часу, витраченого на їх надання. С\fauxsc{торони} передбачають надання \fieldw{fullprice}{25} годин послуг щомісячно впродовж дії \fauxsc{угоди}. Обсяги робіт \textit{можуть} бути змінені \fauxsc{домовленностями} у разі потреби. Терміном виконання послуг \textit{має} бути один календарний місяць із отримання \fauxsc{виконавцем} опису послуг до надання. Терміни надання окремих послуг \textit{можуть} бути змінені \fauxsc{домовленностями} у разі потреби.}
-        {An hour of time spent for the service provision is to be considered the unit of services provided. The \textsc{parties} foresee the provision of \fieldw{fullprice}{25} hours worth of services each month throughout the duration of the \textsc{agreement}. The amounts of services provided \textit{may} be altered with \textsc{arrangements} as needed. The services \textit{shall} be provided within one calendar month since the time the \textsc{provider} recieves the instructions about the services to provide. The terms for the provision of select services \textit{may} be altered with \textsc{arrangements} as needed.}
+        {Кількість послуг в годинах визначається \fauxsc{виконавцем} відповідно до складності та конкретики завдань. Технічний опис завдань \emph{може} містити максимальну кількість годин, які \fauxsc{замовник} \emph{має} оплатити, з чим \fauxsc{виконавець} погоджується.}
+        {The hourly quantity of services provided is determined by the \textsc{provider} according to the complexity and the pecularities of the tasks. A task technical description \emph{may} contain an upper limit of hours that the \textsc{customer} \emph{shall} pay to which the \textsc{provider} agrees.}
         {Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque arcu leo, malesuada vitae eleifend vitae, ultrices quis nulla. Curabitur eget pharetra tortor. Phasellus nisi massa, facilisis sed dui vestibulum, maximus malesuada mauris. Duis dapibus consectetur tellus, a ornare lacus porta a.}
       \clause
         {Вартість}
         {Price}
         {Eesti}
-        {Ціна однієї години зазначена у \smartref{app:services}{додатку }. Відсутність ціни на послугу, або її нульове значення означає згоду на безоплатне виконання відповідної послуги \fauxsc{виконавцем}. Вартість послуг, здійснених у межах \fauxsc{угоди} \textit{не має} перевищувати \fieldw{fullprice}{75} €. У випадку потреби здійснення послуг на суму, більше цього обмеження, \fauxsc{сторони} \textit{мають} укласти нову \fauxsc{угоду}.}
-        {\smartref{app:services}{Appendix } determines the hourly price. The lack of the price for the service or its zero value means that \textsc{provider} agrees to supply the respective service free of charge. The price of the services provided within the \textsc{agreement}'s scope \textit{shall not} exceed \fieldw{fullprice}{75} €. Should the need of the service provision above this sum arise, the \textsc{parties} \textit{shall} conclude a new \textsc{agreement}.}
+        {Вартість послуг, здійснених у межах \fauxsc{угоди} \textit{не має} перевищувати \fieldw{fullprice}{75} €. У випадку потреби здійснення послуг на суму, більше цього обмеження, \fauxsc{сторони} \textit{мають} укласти нову \fauxsc{угоду}.}
+        {The price of the services provided within the \textsc{agreement}'s scope \textit{shall not} exceed \fieldw{fullprice}{75} €. Should the need of the service provision above this sum arise, the \textsc{parties} \textit{shall} conclude a new \textsc{agreement}.}
         {Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque arcu leo, malesuada vitae eleifend vitae, ultrices quis nulla. Curabitur eget pharetra tortor.}
       \clause % TODO check EU directive
         {Платежі}
@@ -159,9 +179,6 @@
         \subsection{Підприємницьтво}
         Відповідно до \href{http://zakon3.rada.gov.ua/laws/show/959-12/parao138\#o138}{статті 5 Закону України «Про зовнішньоекономічну діяльність»}, \fauxsc{виконавець}, який не є юридичною особою, \textit{має} бути зареєстрований як підприємець.
 
-        \subsection{Реєстрація як працівника}
-        У разі вимоги від відповідних органів Республіки Естонія, \fauxsc{сторони} домовляються про можливість реєстрації \fauxsc{виконавця} як працівника \fauxsc{замовника} без змін до природи цієї \fauxsc{угоди}. За потреби \fauxsc{виконавець} \textit{має} передати \fauxsc{замовнику} свій сертифікат соціального страхування. 
-
         \subsection{Право представлення}
         Під час дії \fauxsc{угоди} \fauxsc{виконавець} \textit{може} асоціювати себе із брендом та ім'ям \fauxsc{замовника}, користуватись його атрибутикою під час участі у урочистих заходах, конференціях тощо, за \fauxsc{домовленністю}.
 
@@ -181,9 +198,6 @@
 
         \subsection{Entrepreneurship}
         In accordance to \href{http://zakon3.rada.gov.ua/laws/show/959-12/parao138\#o138}{the article 5 of Ukrainian Law on External Economic Activity} the \textsc{provider} which is not a legal person \textit{shall} be registered as an entrepreneur.
-
-        \subsection{Employee registration}
-        In case a demand is made by the respective bodies of Republic of Estonia, the \textsc{parties} agree on the possibility for the \textsc{provider} to be registered as an employee of the \textsc{customer} without changing the nature of this \textsc{agreement}. The \textsc{provider} \textit{shall} supply the \textit{customer} with their certificate of social security if needed.
 
         \subsection{Right to represent}
         The \textsc{provder}, \textit{may} associate themselves with the \textsc{customer}'s name and brand, make use of \textsc{customer}'s symbolics for the purpose of the ceremonial events, conferences and so on, based on an \textsc{arrangement}.
@@ -215,49 +229,67 @@
         Обладнання, яке передане \fauxsc{виконавцю} для виконання послуг залишається у власності \fauxsc{виконавця}. У разі створення матеріальних об'єктів у ході виконання послуг, вони \textit{мають} передаватись у власність \fauxsc{замовника} завдяки окремим \fauxsc{умовам} або \fauxsc{домовленностям}.
 
         \subsection{Інтелектуальна власність}
-        В\fauxsc{иконавець} \textit{має} передавати \fauxsc{замовнику} майнові авторські права на результати виконання послуг згідно до \fauxsc{угоди}, такі як програмний код, креслення, звіти, моделі, графічні матеріали, дані досліджень, патенти, документація тощо, але не обмежуючись цим переліком. В\fauxsc{иконавець} втім матиме право вважатись автором цього матеріалу та використовувати його в цілях портфоліо, якщо це не суперечить \smartref{sec:nda}{}. У випадку, якщо \fauxsc{виконавець} виконує послуги на користь \fauxsc{третьої особи} від імені \fauxsc{замовника}, домовленість \fauxsc{замовника} та \fauxsc{третьої особи} щодо порядку передачі авторських прав матиме приорітет над положеннями цієї угоди.}
+        В\fauxsc{иконавець} \textit{має} передавати \fauxsc{замовнику} майнові авторські права на результати виконання послуг згідно до \fauxsc{угоди}, такі як програмний код, креслення, звіти, моделі, графічні матеріали, дані досліджень, патенти, документація тощо, але не обмежуючись цим переліком. В\fauxsc{иконавець} втім матиме право вважатись автором цього матеріалу та використовувати його в цілях портфоліо, якщо це не суперечить додатковим \fauxsc{домовленностям} про нерозголошення. У випадку, якщо \fauxsc{виконавець} виконує послуги на користь \fauxsc{третьої особи} від імені \fauxsc{замовника}, домовленість \fauxsc{замовника} та \fauxsc{третьої особи} щодо порядку передачі авторських прав матиме приорітет над положеннями цієї угоди.}
         {
         The equipment transferred to the \textsc{provider} for the service provision stays in the \textsc{customer}'s property. Should the material objects be the results of the service provision, they \textit{shall} be transferred to the \textsc{customer}'s property using separate \textsc{agreements} or \textsc{arrangements}.
 
         \subsection{Intellectual property}
-        The \textsc{provider} shall transfer the copyright over the results of the services provided in the scope of \textsc{agreement} including, but not limited to software source code, schematics, reports, models, graphical material, research data, patents, documentation \emph{et ce\-te\-ra} to the \textsc{customer}. The \textsc{provider} however shall be considered the author of the respective material and allowed to use it in the purposes of porfolio unless such act would contradcit \smartref{sec:nda}{}. In cases when the \textsc{provider} provides the services to the \textsc{third party} on the \textsc{customer}'s behalf, the agreement on copyright transfer between the \textsc{third party} and the \textsc{customer} would take priority over the provisions of this agreement.}
-        {}
-      \clause
-        {Нерозголошення}
-        {Non-disclosure}
-        {}
-        {\label{sec:nda}}
-        {}
+        The \textsc{provider} shall transfer the copyright over the results of the services provided in the scope of \textsc{agreement} including, but not limited to software source code, schematics, reports, models, graphical material, research data, patents, documentation \emph{et ce\-te\-ra} to the \textsc{customer}. The \textsc{provider} however shall be considered the author of the respective material and allowed to use it in the purposes of porfolio unless such act would contradcit additional non-disclosure \textsc{arrangements}. In cases when the \textsc{provider} provides the services to the \textsc{third party} on the \textsc{customer}'s behalf, the agreement on copyright transfer between the \textsc{third party} and the \textsc{customer} would take priority over the provisions of this agreement.}
         {}
       \clause
         {Форс-мажор}
         {Force majeure}
         {}
-        {\label{sec:nda}}
-        {}
-        {}
-      \clause
-        {Санкції та рекламації}
-        {}
-        {}
-        {}
-        {}
+        {Невиконання \fauxsc{стороною} обов'язків згідно \fauxsc{угоди}, що було спричинено обставинами непереборної дії, такими як дії уряду, війни, стихійні лиха \emph{та інші}, не \emph{має} вважатись порушенням \fauxsc{угоди}.}
+        {The failure of the \textsc{party} to comply with their obligations arising from the \textsc{agreement} that is caused by the force majeure such as actions of the governments, wars, natural disasters \emph{et cetera}, \emph{shall} not be considered to be a breach of the \textsc{agreement}.}
         {}
       \clause
-        {Урегулювання спорів у судовому порядку.}
+        {Урегулювання спорів}
+        {Dispute resolution}
         {}
-        {}
-        {}
-        {}
+        {У\fauxsc{года} укладена у відповідності до законодавства України та Естонської Республіки. С\faux{торони} визначають юрисдикцію суду повіту Гар'юмаа для вирішення конфліктних ситуацій.}
+        {The \textsc{agreement} is concluded in accordance to the laws of Ukraine and Estonian Republic. The \textsc{parties} define the jurisdiction of Harju county court for the settlement of conflicts.}
         {}
       \clause
         {Набуття чинності}
         {Entry into force}
         {}
-        {С\fauxsc{торони} підписують \fauxsc{угоду} та її похідні документи за допомогою електронно-цифрового підпису, засвідченого у відповідних країнах за умови, що такий підпис вважатиметься чинним країнами, в яких \fauxsc{сторони} є резидентами, а також у країні, призначеній для вирішення спорів між \fauxsc{сторонами} щодо \fauxsc{угоди} та її виконання. У разі технічної, або юридичної неможливості накласти на \fauxsc{угоду} електронно-цифровий підпис, \fauxsc{угода} виготовляється у паперовому форматі в двох примірниках та підписується на кожній сторінці ліворуч — \fauxsc{замовником}, а праворуч — \fauxsc{виконавцем}. У\fauxsc{года} набуває чинності із момента її підписання обома \fauxsc{сторонами}.}
-        {The \textsc{parties} sign the \textsc{agrement} and its derivative documents by means of digital signature certified by respective countries on the condition that such a signature would be considered valid in the countries the \textsc{parties} are resident in and in the country which is designated for dispute resolution over the \textsc{agreement} and its execution. In the event of technical or legal inability to apply the digital signature, the \textsc{agreement} shall be produced on paper in two copies and signed on each page by the \textsc{customer} on the left and by the \textsc{provider} on the right. The \textsc{agreement} is considered in force after the moment both of the \textsc{parties} sign it.}
-        {}
+        {С\fauxsc{торони} підписують \fauxsc{угоду} та її похідні документи за допомогою електронно-цифрового підпису, засвідченого у відповідних країнах за умови, що такий підпис вважатиметься чинним країнами, в яких \fauxsc{сторони} є резидентами, а також у країні, призначеній для вирішення спорів між \fauxsc{сторонами} щодо \fauxsc{угоди} та її виконання.
 
+        \subsection{Матеріальна копія}
+        У разі технічної, або юридичної неможливості накласти на \fauxsc{угоду} електронно-цифровий підпис, \fauxsc{угода} виготовляється у паперовому форматі в двох примірниках та підписується на кожній сторінці ліворуч — \fauxsc{замовником}, а праворуч — \fauxsc{виконавцем}. У\fauxsc{года} набуває чинності із момента її підписання обома \fauxsc{сторонами}.}
+        {The \textsc{parties} sign the \textsc{agrement} and its derivative documents by means of digital signature certified by respective countries on the condition that such a signature would be considered valid in the countries the \textsc{parties} are resident in and in the country which is designated for dispute resolution over the \textsc{agreement} and its execution. 
+        \subsection{Material copy}
+        In the event of technical or legal inability to apply the digital signature, the \textsc{agreement} shall be produced on paper in two copies and signed on each page by the \textsc{customer} on the left and by the \textsc{provider} on the right. The \textsc{agreement} is considered in force after the moment both of the \textsc{parties} sign it.}
+        {}
+      \clause
+        {Строк дії}
+        {Duration}
+        {Eesti}
+        {У\fauxsc{года} укладається \fauxsc{сторонами} із строком дії у \fieldw{duration}{75} рік(-и,-ів). Якщо \fauxsc{замовник} на дату закінчення дії \fauxsc{угоди} продовжує потребувати послуг від \fauxsc{виконавця}, \fauxsc{сторони} мають укласти нову \fauxsc{угоду}.}
+        {The \textsc{agreement} is concluded by the \textsc{parties} for the duration of \fieldw{duration}{75} year(s). Should the \textsc{customer} require further service on the \textsc{provider}'s behalf, a new \textsc{agreement} \emph{shall} be concluded.}
+        {}
+      \clause
+        {Припинення дії}
+        {Termination}
+        {Eeesti}
+        {Дія \fauxsc{угоди} припиняється у наступних випадках:
+        \begin{enumerate}
+          \item Закінчення строку дії;
+          \item Взаємна згода \fauxsc{сторін};
+          \item В односторонньому порядку, у випадку чого \fauxsc{угода} діятиме 2 календарні тижні із дати інформування іншої \fauxsc{сторони} про намір розірвати угоду; 
+          \item Визнання угоди нечинною через невідповідність законодавству;
+          \item Рішення компетентного суду;
+        \end{enumerate}}
+        {The \textsc{agreement} is terminated under the following circumstances:
+        \begin{enumerate}
+          \item The duration being expired;
+          \item Mutual agreement by the \textsc{parties};
+          \item Unilaterally, in this case the \textsc{agreement} will be in force for two weeks from the date when the other \textsc{party} has been informed about the intention to terminate the \textsc{agreement};
+          \item Invalidation of the \textsc{agreement} in case of legislatory non-compliance;
+          \item The decision of the competent court; 
+        \end{enumerate} }
+        {}
       \clausenewpage
         {Підписанти}
         {Signatories}
