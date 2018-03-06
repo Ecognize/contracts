@@ -30,7 +30,7 @@
 \usepackage{multirow}
 \usepackage{xunicode}
 \usepackage{indentfirst}
-\usepackage{background}
+\usepackage[firstpage=true]{background}
 \usepackage{fancyhdr}
 \XeTeXinputencoding utf8
 \usepackage{polyglossia}
@@ -90,4 +90,3 @@
 \newcommand\smartref[2]{\hyperref[#1]{#2\ref{#1}}}
 % This is lame, but I have no will to make it better
 \newcommand{\myloop}[3]{\stepcounter{#1}#3\ifthenelse{\value{#1} < \value{#2}}{\\\myloop{#1}{#2}{#3}}{\\}}
-
